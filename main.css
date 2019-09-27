@@ -1,0 +1,733 @@
+
+* {
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    text-align: center;
+  }
+
+    #container {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        grid-template-rows: 100px, 100px, 800px, 100px, 900px;
+        align-items: start;
+        max-width: 1600px;
+        margin: auto;
+    }
+
+    #logo {
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 30px;
+        align-self: flex-start;
+        margin-top: 20px;
+        width: 150px;
+    }
+
+    #name {
+        grid-column: 2/4;
+        grid-row: 1;
+    }
+
+    h1 {
+        text-align: right;
+        margin-right: 15px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-size: 38px;
+        text-transform: uppercase;
+    }
+
+    #name p {
+        text-align: right;
+        margin: 0 15px 5px 0;
+        color: blue;
+        font-size: 20px;
+    }     
+
+    #iconList {
+        margin-right: 15px;
+        margin-top: 20px;
+        justify-self: end;
+        align-self: center;
+        display: inline-block;
+        letter-spacing: 3px;
+        float: left;
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .fa {
+        color: gray;
+    }
+
+    .fa-envelope-square:hover {
+        color: red;
+    }
+    
+    .fa-linkedin-square:hover {
+        color: blue;
+    }
+    
+    .fa-github-square:hover {
+        color: green;
+    }
+
+   
+    #projects-header {
+        height: 70px;
+        color: blue;
+        font-size: 22px;
+        text-transform: uppercase;
+        margin-top: 20px;
+        grid-column: 1 / 4;
+        grid-row: 2;
+        text-align: left;
+        margin-bottom: 30px;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    
+    #projects-header h2 {
+        color: #4169E1;
+        text-align: left;
+        margin-left: 15px;
+        font-size: 30px;
+    }
+
+    .divider {
+        background-color: #008B8B;
+        height: 2px;
+        border-radius: 10%;
+        width: 100%;
+        margin: 10px 30px 10px 0;
+        background: linear-gradient(to right, #D6D6D6, #D6D6D6, cyan);
+    }
+    
+    .pic-container {
+        margin-top: 30px;
+        border-radius: 10%;
+        max-width: 60%;
+        max-height: 150px;
+        overflow: hidden;
+        display: inline-block;
+        position: relative;
+        background-color: lightgreen;
+    
+    }   
+
+    .project-image {
+        width: 100%;
+        opacity: 1;
+        transition: 0.2s;
+    }
+    
+    .project-image:hover {
+        opacity: 0.4;
+        transition: 0.2s;
+    }
+    
+    .title-shadowbox {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 55px;
+        z-index: 2;
+        background-color: rgba(0,0,0,0.7);
+    }
+    
+    .project-title {
+        color: white;
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        max-width: 100%;
+        z-index: 3;
+        padding: 5px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        margin: 0;
+        text-align: left;
+        
+    }
+  
+    #project1 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #project2 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #project3 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    #project4 {
+        margin-top: 10px;
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    #project5 {
+        margin-top: 10px;
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    #project6 {
+        margin-top: 10px;
+        grid-column: 3;
+        grid-row: 4;
+    }
+
+    #project7 {
+        margin-top: 10px;
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    #project8 {
+        margin-top: 10px;
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    #project9 {
+        margin-top: 10px;
+        grid-column: 3;
+        grid-row: 5;
+    }
+
+    #resume-header {
+        margin-top: 30px;
+        color:  blue;
+        grid-column: 1 / 4;
+        grid-row: 6;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    #resume-header h2 {
+        color: #4169E1;
+        text-align: left;
+        margin-left: 15px;
+        font-size: 30px;
+    }
+    
+    #resume {
+        grid-column: 1 / span 3;
+        grid-row: 7;
+        margin-right: 20px;
+        max-width: 850px;
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 5px;
+    }
+    
+    .title {
+        font-size: 1.2em;
+        font-weight: 700;
+        color:  #4169E1;
+    }
+
+    .location, .dates {
+        float: right;
+    }
+
+    .title, .resume {
+        clear: left;
+        float: left;
+    }
+
+    .bigbr {
+        display: none;
+    }
+
+    li, ul, span {
+        text-align: left;
+    }
+    
+    li {
+        color:  black;
+        margin-bottom: 10px;
+    }
+    
+    li:last-child {
+        margin-bottom: 30px;
+    }
+    
+    span {
+        color: black;
+    }
+  
+   
+    
+    .resume {
+        font-style: italic;
+    }
+    
+
+/*BIG VIEWPORT WIDTH Header Styles
+(everything above projects divider plus contact icons)/////////////*/
+
+/*
+    h2 {
+        text-align: left;
+    }
+
+    #logo {
+        grid-column: 1;
+        grid-row: 1;
+        margin-left: 30px;
+        align-self: flex-start;
+        margin-top: 20px;
+        width: 150px;
+    }
+
+    .icon {
+        margin: 0 3px 0 3px;
+    }
+
+    #iconList {
+        margin-right: 15px;
+        margin-top: -30px;
+        justify-self: end;
+        align-self: center;
+        display: inline-block;
+        letter-spacing: 3px;
+        float: left;
+        grid-column: 3;
+        grid-row: 2;
+    }
+
+    .recolor {
+        grid-column: 1;
+        grid-row: 1;
+        font-size: 14px;
+        color: #36C936;
+        align-self: end;
+        justify-self: start;
+        margin-left: 180px;
+        margin-bottom: 4px;
+    }
+
+    .fa-paint-brush {
+        font-size: 14px;
+        color: #36C936;
+        margin-right: 4px;
+    }
+
+    #colorpicker {
+        grid-column: 1;
+        grid-row: 1;
+        align-self: end;
+        justify-self: start;
+        z-index: 1;
+        margin: 0 0 0 10px;
+        width: 140px;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    h1 {
+        text-align: right;
+        margin-right: 15px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    #name {
+        grid-column: 2 / 4;
+        grid-row: 1;
+        
+    }
+
+    #name p {
+        text-align: right;
+        margin: 0 15px 5px 0;
+    }
+
+///////////BIG VIEWPORT WIDTH Projects section/////////////
+
+    #projects-header {
+        color: #4169E1;
+        grid-column: 1 / 4;
+        grid-row: 2;
+        text-align: left;
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+
+    #project1 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #project2 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+
+    #project3 {
+        grid-column: 3;
+        grid-row: 3;
+    }
+
+    #project4 {
+        margin-top: 10px;
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    #project5 {
+        margin-top: 10px;
+        grid-column: 2;
+        grid-row: 4;
+    }
+
+    #project6 {
+        margin-top: 10px;
+        grid-column: 3;
+        grid-row: 4;
+    }
+
+    #project7 {
+        margin-top: 10px;
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    #project8 {
+        margin-top: 10px;
+        grid-column: 2;
+        grid-row: 5;
+    }
+
+    #project9 {
+        margin-top: 10px;
+        grid-column: 3;
+        grid-row: 5;
+    }
+    .projectdescription {
+        margin-bottom: 0;
+    }
+/*
+BIG VIEWPORT WIDTH Resume section////////////
+
+    #resume-header {
+        color:  blue;
+        grid-column: 1 / 4;
+        grid-row: 6;
+        text-align: left;
+        margin-left: 20px;
+    }
+
+    #resume {
+        grid-column: 1 / span 3;
+        grid-row: 7;
+        margin-right: 20px;
+        max-width: 850px;
+    }
+
+    .location, .dates {
+        float: right;s
+    }
+
+    .title, .resume {
+        clear: left;
+        float: left;
+    }
+
+    .bigbr {
+        display: none;
+    }
+
+/*BIG VIEWPORT WIDTH Post Content//////////////////
+
+    #backToTop {
+        display: none;
+    }
+
+
+
+
+    @-webkit-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @-moz-keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    }
+    
+    @keyframes Gradient {
+        0% {
+            background-position: 0% 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0% 50%
+        }
+    } */
+
+
+
+
+
+/* 
+    ////////////////Header Styles (everything above projects
+divider plus contact icons)/////////////
+
+h1 {
+    margin-right: 15px;
+    margin-top: 50px;
+    font-size: 38px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+
+h2 {
+    margin: 15px;
+}
+
+#logo {
+    margin-top: 50px;
+    width: 100px;
+    border-radius: 50%;
+    
+}
+
+.fa {
+    font-size: 40px;
+    color: gray;
+}
+
+#name p {
+    margin: 0 15px 5px 0;
+    color: #008B8B;
+    font-size: 20px;
+}
+
+.recolor {
+    font-size: 14px;
+    color: black;
+    position: relative;
+    width: 160px;
+    margin: auto;
+}
+
+.fa-paint-brush {
+    font-size: 14px;
+    color: #36C936;
+    margin-right: 7px;
+}
+
+#colorpicker {
+    z-index: 1;
+    width: 160px;
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    left: -3px;
+    top: -3px;
+}
+
+.icon {
+    margin: 30px 10px 30px 10px;
+}
+
+.fa-envelope-square:hover {
+    color: red;
+}
+
+.fa-linkedin-square:hover {
+    color: blue;
+}
+
+.fa-github-square:hover {
+    color: green;
+}
+
+/*Projects section/////////////
+
+.divider {
+    background-color: #008B8B;
+    height: 2px;
+    border-radius: 10%;
+    width: 100%;
+    margin: 10px 30px 10px 0;
+    background: linear-gradient(to right, #D6D6D6, #D6D6D6, cyan);
+}
+
+#projects-header {
+    height: 90px;
+    margin: 30px 0 30px 0;
+    color: blue;
+    font-size: 22px;
+    text-transform: uppercase;
+    
+  
+}
+
+.pic-container {
+    border-radius: 10%;
+    max-width: 60%;
+    max-height: 150px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    background-color: lightgreen;
+
+}
+
+.pic-container2 {
+    border-radius: 10%;
+    max-width: 90%;
+    max-height: 200px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+
+}
+
+
+.project-image {
+    width: 100%;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+.project-image:hover {
+    opacity: 0.4;
+    transition: 0.2s;
+}
+
+.title-shadowbox {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.project-title {
+    color: white;
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    max-width: 100%;
+    z-index: 3;
+    padding: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+    text-align: left;
+    
+}
+
+.projectdescription {
+    margin-bottom: 45px;
+    text-align: justify;
+    max-width: 75%;
+    display: inline-block;
+}
+
+/*Resume section///////////////////
+
+#resume-header {
+    margin: 40px 0 40px 0;
+    color: blue;
+    font-size: 22px;
+    text-transform: uppercase;
+  
+    
+}
+
+li, ul, span {
+    text-align: left;
+}
+
+li {
+    color:  black;
+    margin-bottom: 10px;
+}
+
+li:last-child {
+    margin-bottom: 30px;
+}
+
+span {
+    color: black;
+}
+
+#resume {
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 5px;
+
+}
+
+.title {
+    font-size: 1.2em;
+    font-weight: 700;
+    color:  #008B8B;
+}
+
+.resume {
+    font-style: italic;
+}
+
+/*Post Content//////////////////
+
+#backToTop {
+    text-decoration: none;
+    color: #36C936;
+    cursor: pointer;
+}
+
+#backToTop:hover {
+    color: lightgray;
+}
+
+#footer {
+    z-index: -1;
+    position: absolute;
+    left:0;
+    bottom: -50px;
+    width: 100%;
+    margin: 0;
+    opacity: 0.2;
+}
+
+#copytext {
+    position: absolute;
+    right: 20px;
+    bottom: -50px;
+    font-size: 12px;
+    color: gray;
+} */
